@@ -5,6 +5,7 @@ import traceback
 from datetime import datetime
 import random
 
+
 road_angles_list=[]
 road_segments_list=[]
 road_types_list=[]
@@ -78,7 +79,7 @@ try:
     
     for i in range(len(road_angles_list)):
             simulator = UdacitySimulator(
-                simulator_exe_path="./examples/udacity/sim/udacity_linux/udacity_binary.x86_64",
+                simulator_exe_path="./examples/udacity/sim/udacity/udacity_sim_weather_sky_ready_angles_fortuna.app",
                 host="127.0.0.1",
                 port=9091
             )    
@@ -87,8 +88,16 @@ try:
             benchmarking_obj = PerturbationDrive(simulator, None)
             print(f"{5 * '#'} Testing road {i} {5 * '#'}")
             time = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+            perturbation_names =["gaussian_noise","poisson_noise","impulse_noise","defocus_blur","glass_blur","motion_blur",
+            "zoom_blur","increase_brightness","contrast","elastic","pixelate","jpeg_filter","shear_image",
+            "translate_image", "scale_image", "rotate_image", "fog_mapping", "splatter_mapping",
+            "dotted_lines_mapping", "zigzag_mapping","canny_edges_mapping","speckle_noise_filter","false_color_filter","high_pass_filter","low_pass_filter","phase_scrambling",
+            "histogram_equalisation", "reflection_filter", "white_balance_filter", "sharpen_filter",
+            "grayscale_filter", "posterize_filter", "cutout_filter", "sample_pairing_filter", "gaussian_blur",
+            "saturation_filter","static_rain_filter","static_object_overlay","static_sun_filter","static_lightning_filter","static_smoke_filter"]
+
             benchmarking_obj.grid_seach(
-                perturbation_functions=[],
+                perturbation_functions=perturbation_names,
                 attention_map={},
                 road_generator=road_generator,
                 road_angles=road_angles_list[i],
@@ -97,7 +106,7 @@ try:
                 overwrite_logs=True,
                 image_size=(240, 320),
                 test_model=False,
-                perturb=False
+                perturb=True
             )
             print(f"{5 * '#'} Finished Testing road {i} {5 * '#'}")
 except Exception as e:

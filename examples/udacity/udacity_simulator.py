@@ -352,7 +352,7 @@ def pid_speed25(test,road_error, angle_error, speed_error, prev_road_error, prev
 class UdacitySimulator(PerturbationSimulator):
     def __init__(
         self,
-        simulator_exe_path: str = "./examples/udacity/udacity_utils/sim/udacity_sim.app",
+        simulator_exe_path: str = "./examples/udacity/sim/udacity/udacity_sim_weather_sky_ready_angles_fortuna.app",
         host: str = "127.0.0.1",
         port: int = 9091,
         show_image_cb=True

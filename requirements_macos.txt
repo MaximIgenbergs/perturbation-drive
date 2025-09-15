@@ -13,12 +13,12 @@ cffi==1.15.1
 charset-normalizer==2.0.4
 click==8.0.4
 cloudpickle==2.2.1
-codecov==2.1.11
+# codecov==2.1.11
 colorama==0.4.6
 commonmark==0.9.1
 confection==0.0.4
 contourpy==1.0.5
-coverage==7.2.2
+# coverage==7.2.2
 cryptography==41.0.3
 cycler==0.11.0
 cymem==2.0.6
@@ -26,7 +26,7 @@ decorator==4.4.2
 dill==0.3.7
 docopt==0.6.2
 docutils==0.18.1
--e git+https://github.com/tawnkramer/gym-donkeycar.git#egg=gym_donkeycar
+# -e git+https://github.com/tawnkramer/gym-donkeycar.git#egg=gym_donkeycar
 exceptiongroup==1.0.4
 fastai==2.7.12
 fastcore==1.5.29
@@ -41,11 +41,11 @@ gmpy2==2.1.2
 google-auth==2.23.0
 google-auth-oauthlib==0.4.6
 google-pasta==0.2.0
-grpcio==1.48.2
+grpcio==1.56.2
 gym==0.22.0
-gym-donkeycar==1.3.1
+# gym-donkeycar==1.3.1
 gym-notices==0.0.8
-h5py==3.6.0
+h5py==3.10.0
 idna==3.4
 imageio==2.31.5
 imageio-ffmpeg==0.4.9
@@ -56,9 +56,10 @@ iniconfig==1.1.1
 isort==5.9.3
 Jinja2==3.1.2
 joblib==1.2.0
-keras==2.9.0
-Keras-Preprocessing==1.1.2
-keras-vis==0.5.0
+# keras==2.9.0
+# Keras-Preprocessing==1.1.2
+# keras-vis==0.5.0
+# tf_keras-vis==0.8.1 # TODO: find a compatibale version with the pinned tensorflow version
 Kivy==2.1.0
 Kivy-Garden==0.1.5
 kiwisolver==1.4.4
@@ -75,8 +76,8 @@ moviepy==1.0.3
 mpmath==1.3.0
 munkres==1.1.4
 murmurhash==1.0.7
-mypy==0.981
-mypy-extensions==0.4.3
+# mypy==0.981
+# mypy-extensions==0.4.3
 networkx==3.1
 numexpr==2.8.4
 numpy==1.22.3
@@ -115,8 +116,8 @@ pyparsing==3.0.9
 pyperf==2.6.1
 pyserial==3.5
 PySocks==1.7.1
-pytest==7.4.0
-pytest-cov==4.0.0
+# pytest==7.4.0
+# pytest-cov==4.0.0
 python-dateutil==2.8.2
 pytorch-lightning==1.9.5
 pytz==2022.7
@@ -166,7 +167,7 @@ tomlkit==0.11.1
 torch==2.0.1
 torchaudio==2.0.2
 torchmetrics==0.11.4
-torchvision==0.15.2a0
+torchvision==0.15.2
 tornado==6.3.2
 tqdm==4.65.0
 typer==0.4.1
