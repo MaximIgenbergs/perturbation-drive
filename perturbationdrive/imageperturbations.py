@@ -171,7 +171,7 @@ class ImagePerturbation:
         image,
         perturbation_name: str,
         intensity: int,
-    ) -> np.ndarray[Any, np.dtype[np.uint8]]:
+    ):
         """
         Perturbs the image based on the function name given
         """
