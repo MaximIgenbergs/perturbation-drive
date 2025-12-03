@@ -1159,7 +1159,8 @@ def dynamic_rain_filter(scale, image, iterator):
     """
     intensity = [0.15, 0.25, 0.4, 0.6, 0.85][scale]
     rain_overlay = next(iterator)
-    rain_overlay = shift_color(rain_overlay, [31, 146, 59], [191, 35, 0])
+    rain_overlay = shift_color(rain_overlay, [31, 146, 59], [240, 245, 255])
+
 
     # Load the next frame from the iterator
     if (
