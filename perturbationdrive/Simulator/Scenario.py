@@ -25,6 +25,8 @@ class ScenarioOutcome:
     frames: List[int]
     pos: List[Tuple[float, float, float]]
     xte: List[float]
+    angle_errors: List[float]
+    heading_deg: List[float]
     speeds: List[float]
     actions: List[List[float]]
     pid_actions: List[List[float]]

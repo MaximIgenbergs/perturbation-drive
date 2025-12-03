@@ -406,6 +406,8 @@ class UdacitySimulator(PerturbationSimulator):
             # set up params for saving data
             pos_list = []
             xte_list = []
+            angle_error_list = []
+            heading_deg_list = []
             actions_list = []
             pid_list = []
             speed_list = []
@@ -466,9 +468,16 @@ class UdacitySimulator(PerturbationSimulator):
                 else:
                     image=obs
                 
-                road_error=float(info['cte_pid'])
-                angle_error=float(info['angle'])
-                speed_error=target_speed-float(info['speed'])
+                road_error = float(info['cte_pid'])
+                angle_error = float(info['angle'])
+                speed_error = target_speed - float(info['speed'])
+
+                angle_error_list.append(angle_error)
+
+                rotation = info["orientation_euler"]
+                _, yaw_deg, _ = rotation
+                heading_deg_list.append(float(yaw_deg))
+
 
                 
 
@@ -572,6 +581,8 @@ class UdacitySimulator(PerturbationSimulator):
                 frames=[x for x in range(len(pos_list))],
                 pos=pos_list,
                 xte=xte_list,
+                angle_error=angle_error_list,
+                heading_deg=heading_deg_list,
                 speeds=speed_list,
                 actions=actions_list,
                 pid_actions=pid_list,
