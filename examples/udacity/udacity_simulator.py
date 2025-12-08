@@ -581,7 +581,7 @@ class UdacitySimulator(PerturbationSimulator):
                 frames=[x for x in range(len(pos_list))],
                 pos=pos_list,
                 xte=xte_list,
-                angle_error=angle_error_list,
+                angle_errors=angle_error_list,
                 heading_deg=heading_deg_list,
                 speeds=speed_list,
                 actions=actions_list,
